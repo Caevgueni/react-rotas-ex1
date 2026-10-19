@@ -1,3 +1,7 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Promotion from "./routes/Home/Promotion";
+import HomeBody from "./routes/Home/HomeBody";
 
 
 
@@ -6,9 +10,17 @@ function App() {
   
 
   return (
+ <BrowserRouter>
+ <Routes>
+ <Route path="/" element={<Home />} >
+    <Route index element= {<HomeBody />} />
+    <Route path="promotion" element= {<Promotion />} />
+ </Route>
+
+ </Routes>
  
-    <h1>Ola Mundo</h1>
-  )
+ </BrowserRouter>
+  );
 }
 
 export default App
