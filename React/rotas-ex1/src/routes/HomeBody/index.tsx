@@ -1,5 +1,7 @@
-import Button from "../../../components/Header/Button";
-import Card from "../../../components/Header/Card";
+import { Link } from "react-router-dom";
+import Card from "../../components/Card";
+import Button from "../../components/Button";
+
 
 export default function HomeBody() {
   return (
@@ -10,9 +12,14 @@ export default function HomeBody() {
             <Card title="Pagina inicial" />
           </div>
 
+
+         
           <div className="dflex">
+            <Link to={"/promotion"}>
              <Button text="Ver promoção" />
+          </Link> 
           </div>
+         
          
         </div>
       </section>
